@@ -1,0 +1,16 @@
+.doctor-photo {
+    width: 380px;
+    height: 380px;
+    max-width: 100%;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+    background-image: url("../assets/image/profile.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: var(--shadow-xl);
+    border: 5px solid var(--bg-card);
+    animation: morph 8s ease-in-out infinite;
+    z-index: 2;
+}

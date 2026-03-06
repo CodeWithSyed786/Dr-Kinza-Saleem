@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment - Book with Dr. Kinza Saleem</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Book an appointment with Dr. Kinza Saleem for medical consultation and healthcare services.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-container" id="floatingContainer">
+        <!-- JS will inject bubbles and emojis here -->
+    </div>
+
+    <!-- Appointment Section (Updated) -->
+    <section id="appointment">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Appointment</h2>
+                <p>We are here to care for you</p>
+            </div>
+
+            <div class="appointment-wrapper reveal">
+                <div class="form-section">
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label>Patient Name *</label>
+                            <input type="text" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        
+                        <!-- Added Email Field -->
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" class="form-control" placeholder="example@email.com" required>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                            <div class="form-group">
+                                <label>Phone *</label>
+                                <input type="tel" class="form-control" placeholder="03XX-XXXXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Date *</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <!-- Added Location Field -->
+                        <div class="form-group">
+                            <label>Current Location / City *</label>
+                            <input type="text" class="form-control" placeholder="e.g. Dinga, Islamabad" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Select Service Type</label>
+                            <div class="service-options">
+                                <div class="service-option active" onclick="selectService(this, 'General Consultation')">General Consultation</div>
+                                <div class="service-option" onclick="selectService(this, 'Gynecology')">Gynecology</div>
+                                <div class="service-option" onclick="selectService(this, 'Cardiology')">Cardiology</div>
+                                <div class="service-option" onclick="selectService(this, 'Surgery')">Surgery</div>
+                                <div class="service-option" onclick="selectService(this, 'Other')">Any Other Service?</div>
+                            </div>
+                            <!-- Hidden input for JS to fill -->
+                            <input type="hidden" id="selectedService" value="General Consultation">
+                            
+                            <!-- Dynamic Input for "Other" -->
+                            <input type="text" id="otherServiceInput" class="other-service-input" placeholder="Please specify your requirement...">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Describe Symptoms</label>
+                            <textarea class="form-control" rows="4" placeholder="Please describe your symptoms..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%; border-radius:12px;">
+                            Confirm Booking
+                        </button>
+                    </form>
+                </div>
+
+                <div class="info-section">
+                    <h3>Contact Info</h3>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 341 1566420</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Drkinza535@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon - Sat: 9AM - 5PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
