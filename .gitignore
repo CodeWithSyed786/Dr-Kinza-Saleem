@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime appointment data
+backend/submissions.json
+
+# Logs
+*.log
+firebase-debug.log*
